@@ -1,0 +1,91 @@
+:root{
+    --primary-text-color : #f7f7f7;
+}
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    color: var(--primary-text-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+    box-sizing: border-box;
+    position: absolute;
+    top:0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 16px;
+    background-color: black;
+    opacity: 0.8;
+}
+.nav-right{
+    position: absolute;
+    right: 0;
+    width: 40%;
+}
+.nav-left{
+    width: 40%;
+    display:flex;
+    flex-direction: row;  
+    align-items: center;
+}
+.nav-left h1{
+    font-size:32px ;
+}
+.nav-left img{
+    width: 40px;
+    margin-left: 20px;
+    /* height: 37.3px; */
+}
+.nav-ul{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly ;
+}
+.nav-li{
+    list-style: none;
+    font-weight: bold;
+}
+.nav-li:hover{
+    color: red;
+}
+
+    /* Styles for background items and logo */
+.background-image{
+    /* position: absolute; */
+    /* display: none; */
+    z-index: -10;
+    top: 0;
+}
+#background-image-shadow{
+    background-color:black;
+    display: grid;
+    width: 99vw;
+    height: 100vh;
+    z-index: -9;
+    position: absolute;
+    opacity: 0.65;
+    overflow: hidden;
+}
+#background-image-shadow img{
+    position: absolute;
+    width: 512px;
+    bottom: -300px;
+    opacity: 1;
+    z-index: 1;
+    justify-self: center;
+    object-fit: contain;
+}
+.background-image img{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 99vw;
+    height: 100vh;
+    z-index: -10;
+    object-fit: cover;
+
+}

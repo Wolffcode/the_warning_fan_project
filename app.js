@@ -12,3 +12,7 @@ app.listen(3000,()=>{
 app.get('/',(req,res)=>{
     res.sendFile(path.join(__dirname + '/public/html/home.html'))
 })
+
+app.get('/portfolio',(req,res)=>{
+    res.sendFile(path.join(__dirname + '/public/html/freecode.html'))
+})

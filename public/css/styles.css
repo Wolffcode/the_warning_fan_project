@@ -1,5 +1,8 @@
 :root{
     --primary-text-color : #f7f7f7;
+    --red:red;
+    --webshop-color:#EDD23B;
+    --buy-now-color:rgb(56, 56, 56);
 }
 body{
     background-color: black;
@@ -9,6 +12,8 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+
+        /* This code wil give style to the navbar */
 .navbar{
     box-sizing: border-box;
     position: absolute;
@@ -38,7 +43,6 @@ body{
 .nav-left img{
     width: 40px;
     margin-left: 20px;
-    /* height: 37.3px; */
 }
 .nav-ul{
     display: flex;
@@ -50,13 +54,11 @@ body{
     font-weight: bold;
 }
 .nav-li:hover{
-    color: red;
+    color: var(--red);
 }
 
-    /* Styles for background items and logo */
+        /* Styles for background items and logo */
 .background-image{
-    /* position: absolute; */
-    /* display: none; */
     z-index: -10;
     top: 0;
 }
@@ -73,7 +75,7 @@ body{
 #background-image-shadow img{
     position: absolute;
     width: 512px;
-    bottom: -300px;
+    bottom: -250px;
     opacity: 1;
     z-index: 1;
     justify-self: center;
@@ -87,5 +89,321 @@ body{
     height: 100vh;
     z-index: -10;
     object-fit: cover;
+}
+.social{
+    width:100%;
+    padding: 0 35%;
+    box-sizing: border-box;
+    position:absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    left: auto;
+    /* margin: auto; */
+    margin-bottom: 2%;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 20;
+}
+.social a{
+    text-decoration: none;
+    color: var(--primary-text-color);
+}
+.social a:hover{
+    color: var(--red);
+}
 
+
+        /* STYLES FOR THE ABOUT BAND CONTENT */
+.content{
+    display: flex;
+}
+.content article{
+    width: 62%;
+    margin-left: 19%;
+    margin-top: 100px;
+}
+#info{
+    width:100%;
+}
+#new-webshop {
+    background-color: var(--webshop-color);
+    width:380px;
+    height:80px;
+    border-radius: 10%/ 50%;
+    text-align: center;
+    margin: auto;
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    animation-name:webshop-animation ;
+    animation-duration:2s ;
+}
+#new-webshop a{
+    text-decoration: none;
+    text-align: center;
+    margin-top: 8px;
+    font-size:1.5rem ;
+}
+#origins{
+    text-align: justify;
+}
+#origins-span{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    display: block;
+    justify-self: center;
+}
+#origins-span::after{
+    content: '';
+    display: block;
+    position: relative;
+    width: 80%;
+    height: 6px;
+    background-color:var(--red);
+    margin:auto;
+    justify-self: center;
+    border-radius: 6px;
+}
+
+        /* LAST RELEASE SECTION STYLES */
+#last-release{
+    display: flex;
+    flex-direction: column;
+}
+#last-release div{
+    text-align: center;
+}
+.info-h3{
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+#last-release iframe{
+    width: 100%;
+    height: 670px;
+    align-self: center;
+}
+#last-release a{
+    color: var(--primary-text-color);
+}
+
+        /* TOUR SECTION STYLES */
+#tour{
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    align-items: center;
+}
+#tour p{
+    font-size: 1.2rem;
+}
+#tour p::after{
+    content: '';
+    display: block;
+    position: relative;
+    width: 79%;
+    height: 4px;
+    background-color:var(--primary-text-color);
+}
+#tour a{
+    width: 100%;
+}
+#tour img{
+    width: 100%;
+    flex-grow: 3;
+}
+
+        /* RECENT ALBUM SECTION STYLES */
+#recent-album{
+    display:flex;
+    width: 90%;
+    margin-left: 5%;
+}
+#new-album-title{
+    margin:0
+}
+#recent-album div{
+    margin-left: 20px;
+}
+#album-music-videos{
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-left: 40px;
+}
+#info-h3{
+    margin-top: 40px;
+    display: block;
+    text-align: center;
+}
+.music-video-cover a{
+    color: var(--primary-text-color);
+    text-decoration:none;
+}
+.music-video-cover a:hover{
+    color: var(--red);
+}
+#video-autoplay{
+    width: 100%;
+    margin-left: 0;   
+}
+#video-autoplay h3,#video-autoplay p{
+    text-align: center;
+}
+#video-autoplay iframe{
+    position: relative;
+    width: 100%;
+    height: 90vh;
+}
+
+        /* PREVIOUS ALBUM STYLES */
+#previous-albums h3{
+    text-align: center;
+}#previous-albums p:nth-child(1),h4{
+    display:inline;
+    text-align: center;
+}
+.cover-grid{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+}
+.album-cover{
+}
+.album-cover:hover{
+    color: var(--red);
+}
+.buy-now {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+}
+.buy-now p{
+    font-weight: 600;
+    display: inline;
+    color:var(--buy-now-color)
+}
+#buy-now-buttom{
+    margin-left: 100px;
+    padding: 8px;
+    border-radius: 2px 0 0 2px;
+    background-color: var(--webshop-color);
+}
+#buy-now-price{
+    margin-right: 60px;
+    padding: 8px;
+    border-radius: 0 2px 2px 0;
+    background-color: var(--primary-text-color);
+}
+#aguafria{
+    box-sizing: border-box;
+    margin-left: 0;
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+}
+#aguafria img{
+    width: 100%;
+    opacity: .5;
+}
+#aguafria-text{
+    position: absolute;
+    margin-left: 20px;
+    z-index: 10;
+}
+#aguafria-text p{
+    font-size: 4rem;
+}
+#aguafria-text p>a{
+    margin-top: 40px;
+    color: var(--primary-text-color);
+}
+#aguafria-text a:hover{
+    color: var(--red);
+}
+#aguafria-desc{
+    font-size: 1.2rem !important
+}
+#record-company{
+    align-items: center;
+    margin-left: 10%;
+    width: 80%;
+}
+#record-company p{
+    position: relative;
+    text-align: center;
+}
+#record-company-logo img{
+    height: 200px;
+}
+#record-company-logo{
+    display: flex;
+    justify-content: space-evenly;
+}
+#sponsors-grid{
+    /* padding: 40px; */
+    display: content;
+    /* grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px; */
+
+}
+#sponsors-grid a{
+    text-decoration: none;
+    padding: 5px;
+    overflow: hidden;
+}
+#sponsors-grid img{
+    width: 200px;
+    height: 100px;
+}
+#management-booking{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#management {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   flex-wrap: wrap;
+}
+#management p:nth-child(3){
+    margin: 0;
+}
+#management-booking span{
+    margin-top: 40px;
+}
+#booking{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.mail{
+    text-decoration: underline;
+}
+.region{
+    color: var(--red);
+}
+#management-span{
+    color: var(--red);
+}
+#footer{
+    margin-top: 40px;
+ text-align: center;   
+}
+#footer a{
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
+
+        /* KEYFRAMES */
+@keyframes webshop-animation{
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
 }

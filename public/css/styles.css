@@ -126,47 +126,22 @@ body{
 #info{
     width:100%;
 }
-#new-webshop {
-    background-color: var(--webshop-color);
-    width:380px;
-    height:80px;
-    border-radius: 10%/ 50%;
+        /* MERCH WEBSHOP SECTION STYLES */
+#webshop{
+    display: block;
     text-align: center;
-    margin: auto;
-    margin-top: 18px;
-    display: flex;
-    align-items: center;
-    animation-name:webshop-animation ;
-    animation-duration:2s ;
 }
-#new-webshop a{
+#webshop a{
+    color: var(--primary-text-color);
     text-decoration: none;
-    text-align: center;
-    margin-top: 8px;
-    font-size:1.5rem ;
 }
-#origins{
-    text-align: justify;
+#webshop p{
+    font-size: 2.5rem;
 }
-#origins-span{
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: 500;
-    display: block;
-    justify-self: center;
+#webshop img{
+    /* width: 100%; */
+    opacity: .7;
 }
-#origins-span::after{
-    content: '';
-    display: block;
-    position: relative;
-    width: 80%;
-    height: 6px;
-    background-color:var(--red);
-    margin:auto;
-    justify-self: center;
-    border-radius: 6px;
-}
-
         /* LAST RELEASE SECTION STYLES */
 #last-release{
     display: flex;
@@ -191,12 +166,18 @@ body{
         /* TOUR SECTION STYLES */
 #tour{
     display: flex;
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
+    /* margin-left: 5%; */
     align-items: center;
+    margin: 0;
+}
+#tour h3{
+    margin-left: 10%;
+
 }
 #tour p{
     font-size: 1.2rem;
+    margin-left: 10%;
 }
 #tour p::after{
     content: '';
@@ -219,6 +200,7 @@ body{
     display:flex;
     width: 90%;
     margin-left: 5%;
+    margin-top: 0;
 }
 #new-album-title{
     margin:0
@@ -268,8 +250,6 @@ body{
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-evenly;
-}
-.album-cover{
 }
 .album-cover:hover{
     color: var(--red);
@@ -342,12 +322,7 @@ body{
     justify-content: space-evenly;
 }
 #sponsors-grid{
-    /* padding: 40px; */
     display: content;
-    /* grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 10px;
-    column-gap: 10px; */
-
 }
 #sponsors-grid a{
     text-decoration: none;

@@ -4,7 +4,8 @@
   "description": "fan made web page for the warning rockband",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon start app.js"
+    "start": "nodemon start index.js",
+    "server": "nodemon index.js"
   },
   "author": "wolffydev",
   "license": "MIT",

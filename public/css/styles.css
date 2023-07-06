@@ -12,7 +12,6 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-
         /* This code wil give style to the navbar */
 .navbar{
     box-sizing: border-box;
@@ -27,7 +26,7 @@ body{
     opacity: 0.8;
 }
 .nav-right{
-    position: absolute;
+    position: relative;
     right: 0;
     width: 40%;
 }
@@ -48,6 +47,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content:space-evenly ;
+    letter-spacing: 0.5px;
 }
 .nav-li{
     list-style: none;
@@ -55,6 +55,37 @@ body{
 }
 .nav-li:hover{
     color: var(--red);
+}
+.nav-li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--primary-text-color);
+    padding: 15px;
+}
+.nav-li a:hover{
+    color: var(--red);
+}
+.dropdown ul{
+    position: absolute;
+    padding-left: 0;
+    min-width: 100px;
+    background-color: black;
+    /* opacity: 0.8; */
+    color: var(--primary-text-color);
+    display: none;
+}
+.dropdown ul li{
+    margin-top: 10px;
+    line-height: 1.5;
+}
+.dropdown ul li a{
+    padding: 0;
+}
+.dropdown:hover ul{
+    display: block;
+}
+#mobile-menu{
+    display: none;
 }
 
         /* Styles for background items and logo */
@@ -130,6 +161,8 @@ body{
 #webshop{
     display: block;
     text-align: center;
+    border: 4px solid white;
+    margin: 0 0 0 19%;
 }
 #webshop a{
     color: var(--primary-text-color);
@@ -139,7 +172,7 @@ body{
     font-size: 2.5rem;
 }
 #webshop img{
-    /* width: 100%; */
+    width: 100%;
     opacity: .7;
 }
         /* LAST RELEASE SECTION STYLES */
@@ -264,13 +297,13 @@ body{
     display: inline;
     color:var(--buy-now-color)
 }
-#buy-now-buttom{
+.buy-now-button{
     margin-left: 100px;
     padding: 8px;
     border-radius: 2px 0 0 2px;
     background-color: var(--webshop-color);
 }
-#buy-now-price{
+.buy-now-price{
     margin-right: 60px;
     padding: 8px;
     border-radius: 0 2px 2px 0;
@@ -369,7 +402,6 @@ body{
 }
 #footer a{
     color: var(--primary-text-color);
-    text-decoration: none;
 }
 
 
@@ -381,4 +413,193 @@ body{
     100%{
         transform: scale(1);
     }
+}
+
+        /* Responsive styles */
+    /* smartphones screens */
+@media screen and (max-width:767px){
+    body h1, h2, h3, h4, span{
+        font-size: 1rem;
+    }
+    p{
+        font-size: 0.6rem;
+    }
+    .navbar{
+        position: fixed;
+        height: 40px;
+    }
+    .navbar h1{
+        /* display: none; */
+        font-size: 1.2rem;
+    }
+    .navbar img{
+        display: none;
+    }
+    .nav-right{
+        display: none;
+    }
+
+
+    #mobile-menu{
+        position: absolute;
+        right: 0;
+        margin-right: 16px;
+        display: block;
+    }
+    #background-image-shadow{
+        width: 100%;
+    }
+    #background-image-shadow img{
+        bottom: 35%;
+        transform: scale(.4);
+    }
+    .background-image img{
+        height: 50vh;
+        width: 100%;
+    }
+    .social{
+        /* top: -24px; */
+        top: 0px;
+        padding: 0;
+        transform: scale(.8);
+    }
+    .content article{
+        width: 100%;
+        box-sizing: border-box;
+        margin:0
+    }
+    #webshop{
+        margin-top: 20px;
+        margin: 0;
+        border: 0;
+    }
+    #webshop p{
+        font-size: 1rem;
+    }
+    .info-h3{
+        font-size: 1rem;
+        padding: 0 10px;
+        text-align: center;
+    }
+    #last-release iframe{
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    #new-release-p{
+        font-size: 0.6rem;
+    }
+    #tour{
+        display: block;
+    }
+    #tour h3.info-h3{
+        margin: 0;
+    }
+    #tour p{
+        font-size: 0.6rem;
+        margin: 4px 0;
+        text-align: center;
+    }
+    #tour a{
+        position: relative;
+        bottom: -4px;
+    }
+    #tour p::after {
+        content: '';
+        display: block;
+        position: relative;
+        width: 62%;
+        margin-left: 19%;
+        height: 2px;
+        background-color: var(--primary-text-color);
+    }
+    #recent-album{
+        display: block;
+        margin: 0;
+        width: 100%;
+    }
+    #recent-album div{
+        margin: 0;
+    }
+    #recent-album p{
+        font-size: .6rem;
+        text-align: center;
+    }
+    #recent-album img{
+        width: 100%;
+    }
+    #album-music-videos{
+        box-sizing: border-box;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 8px;
+        column-gap: 8px;
+        padding: 8px;
+    }
+    #video-autoplay iframe{
+        width: 100%;
+        height: 250px;
+    }
+    #previous-albums h4{
+        font-size: 0.6rem;
+        margin-left: 12%;
+    }
+    .cover-grid{
+        padding: 0 8px;
+        box-sizing: border-box;
+        justify-content: space-between;
+        column-gap: 8px;
+    }
+    .album-cover{
+        width: 100%;
+        text-align: center;
+    }
+    .album-cover img{
+        width: 100%;
+        height: 176px;
+    }
+    .buy-now-button{
+        width: 50%;
+        margin-left: 40%;
+        padding: 6px;
+    }
+    .buy-now-price{
+        width: 50%;
+        margin-right: 25% ;
+        
+        padding: 6px;
+    }
+    #aguafria{
+        height: 252.52px;
+        margin-top: 12px;
+    }
+    #aguafria-text{
+        margin-top: 60px;
+    }
+    #aguafria-text p{
+        font-size: 1rem;
+    }
+    #aguafria-desc{
+        font-size: 0.6rem !important; 
+    }
+    #record-company-logo img {
+        margin-top: 20px;
+        height: 80px;
+    }
+    #sponsors-grid img {
+        width: 80px;
+        height: 40px;
+    }
+    #booking{
+        padding: 0 8px;
+        column-gap: 8px;
+        box-sizing: border-box;
+    }
+    #booking p{
+        font-size: 0.5rem;
+    }
+
+}
+    /* tablets screens */
+@media screen and (min-width:767px) and (max-width:1023px){
+
 }

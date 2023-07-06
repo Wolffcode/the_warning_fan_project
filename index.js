@@ -11,6 +11,6 @@ app.listen(3000,()=>{
 })
 
 app.get('/',(req,res)=>{
-    res.sendFile(path.join(__dirname + '/public/html/home.html'))
+    res.sendFile(path.join(__dirname + '/public/html/index.html'))
 })
 

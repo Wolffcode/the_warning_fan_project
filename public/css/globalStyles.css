@@ -1,0 +1,280 @@
+:root{
+    --primary-text-color : #f7f7f7;
+    --red:red;
+    --webshop-color:#EDD23B;
+    --buy-now-color:rgb(56, 56, 56);
+}
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    color: var(--primary-text-color);
+    font-family: 'Roboto', sans-serif;
+}
+.inactive{
+    display: none;
+}
+.left-fade{
+    animation: menu-fade 0.3s;
+}
+
+
+        /* This code wil give style to the navbar */
+
+.navbar{
+    box-sizing: border-box;
+    position: absolute;
+    top:0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 16px;
+    background-color: black;
+    opacity: 0.8;
+    z-index: 30;
+}
+.nav-right{
+    box-sizing: border-box;
+    position: relative;
+    margin-left: auto;
+}
+.nav-left{
+    width: 40%;
+    display:flex;
+    flex-direction: row;  
+    align-items: center;
+}
+.nav-left h1{
+    font-size:32px ;
+}
+.nav-left img{
+    width: 40px;
+    margin-left: 20px;
+}
+.nav-ul{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly ;
+    letter-spacing: 0.5px;
+}
+.nav-li{
+    list-style: none;
+    font-weight: bold;
+}
+.nav-li:hover{
+    color: var(--red);
+}
+.nav-li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--primary-text-color);
+    padding: 0 15px;
+}
+.nav-li a:hover{
+    color: var(--red);
+}
+.dropdown{
+    padding: 0 15px;
+}
+.dropdown ul{
+    position: absolute;
+    padding-left: 0;
+    min-width: 100px;
+    background-color: black;
+    color: var(--primary-text-color);
+    display: none;
+}
+.dropdown ul li{
+    margin-top: 10px;
+    line-height: 1.5;
+}
+.dropdown ul li a{
+    padding: 0;
+}
+.dropdown:hover ul{
+    display: block;
+}
+#mobile-menu{
+    display: none;
+}
+
+#record-company{
+    align-items: center;
+    margin-left: 10%;
+    width: 80%;
+}
+#record-company p{
+    position: relative;
+    text-align: center;
+}
+#record-company-logo img{
+    height: 200px;
+}
+#record-company-logo{
+    display: flex;
+    justify-content: space-evenly;
+}
+#sponsors-grid{
+    display: content;
+}
+#sponsors-grid a{
+    text-decoration: none;
+    padding: 5px;
+    overflow: hidden;
+}
+#sponsors-grid img{
+    width: 200px;
+    height: 100px;
+}
+#management-booking{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#management {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   flex-wrap: wrap;
+}
+#management p:nth-child(3){
+    margin: 0;
+}
+#management-booking span{
+    margin-top: 40px;
+}
+#booking{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.mail{
+    text-decoration: underline;
+}
+.region{
+    color: var(--red);
+}
+#management-span{
+    color: var(--red);
+}
+#footer{
+    margin-top: 40px;
+ text-align: center;   
+}
+#footer a{
+    color: var(--primary-text-color);
+}
+
+
+@media screen and (max-width:767px){
+    body h1, h2, h3, h4, span{
+        font-size: 1.4rem;
+    }
+    body p{
+        font-size: 1rem;
+    }
+    .navbar{
+        position: fixed;
+        height: 60px;
+    }
+    .navbar h1{
+        width: 150;
+        font-size: 1.4rem;
+    }
+    .navbar img{
+        display: none;
+    }
+    .nav-left{
+        width: 70%;
+    }
+    .nav-right{
+        display: none;
+    }
+
+
+    #mobile-menu{
+        position: absolute;
+        right: 0;
+        margin-right: 16px;
+        display: block;
+    }
+    #mobile-menu i{
+        font-size: 2.4rem;
+    }
+    #side-menu-mobile{
+        width: 100%;
+        margin-top: 20px;
+        background-color: black;
+        position: absolute;
+        top: 40px;
+        left:0;
+        opacity: 1;
+    }
+    #side-menu-mobile .nav-li a::after{
+        content: '';
+        display: block;
+        position: relative;
+        width: 40px;
+        height: 4px;
+        color: var(--primary-text-color);
+    }
+    .nav-li a{
+        padding: 0;
+    }
+    .dropdown{
+        padding: 0;
+    }
+    .dropdown ul{
+        position: relative;
+        padding-left: 0;
+        min-width: 100px;
+        background-color: black;
+        color: var(--primary-text-color);
+        display: block;
+    }
+    .dropdown ul li{
+        margin: 4px 0 0 12px;
+        line-height: 1;
+    }
+    .dropdown ul li a{
+        padding: 4px 0;
+    }
+    #record-company-logo img {
+        margin-top: 20px;
+        height: 80px;
+    }
+    #sponsors-grid img {
+        width: 80px;
+        height: 40px;
+    }
+    #booking{
+        display: block;
+        text-align: center;
+        padding: 0 8px;
+        column-gap: 8px;
+        box-sizing: border-box;
+    }
+    #booking p{
+        /* font-size: 0.5rem; */
+    }
+}
+
+       /* KEYFRAMES */
+
+       @keyframes left-fade{
+        0%{
+            transform: translate(300px,0);
+        }
+        100%{
+            transform: translate(0px,0);
+        }
+    }
+    
+    @keyframes right-fade{
+        0%{
+            transform: translate(0px,0);
+        }
+        100%{
+            transform: translate(300px,0);
+        }
+    }

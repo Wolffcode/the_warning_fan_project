@@ -11,82 +11,16 @@ body{
     color: var(--primary-text-color);
     font-family: 'Roboto', sans-serif;
 }
+.inactive{
+    display: none;
+}
+.left-fade{
+    animation: menu-fade 0.3s;
+}
+
 
         /* This code wil give style to the navbar */
-.navbar{
-    box-sizing: border-box;
-    position: absolute;
-    top:0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px 16px;
-    background-color: black;
-    opacity: 0.8;
-}
-.nav-right{
-    position: relative;
-    right: 0;
-    width: 40%;
-}
-.nav-left{
-    width: 40%;
-    display:flex;
-    flex-direction: row;  
-    align-items: center;
-}
-.nav-left h1{
-    font-size:32px ;
-}
-.nav-left img{
-    width: 40px;
-    margin-left: 20px;
-}
-.nav-ul{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-evenly ;
-    letter-spacing: 0.5px;
-}
-.nav-li{
-    list-style: none;
-    font-weight: bold;
-}
-.nav-li:hover{
-    color: var(--red);
-}
-.nav-li a{
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--primary-text-color);
-    padding: 15px;
-}
-.nav-li a:hover{
-    color: var(--red);
-}
-.dropdown ul{
-    position: absolute;
-    padding-left: 0;
-    min-width: 100px;
-    background-color: black;
-    /* opacity: 0.8; */
-    color: var(--primary-text-color);
-    display: none;
-}
-.dropdown ul li{
-    margin-top: 10px;
-    line-height: 1.5;
-}
-.dropdown ul li a{
-    padding: 0;
-}
-.dropdown:hover ul{
-    display: block;
-}
-#mobile-menu{
-    display: none;
-}
+
 
         /* Styles for background items and logo */
 .background-image{
@@ -338,114 +272,19 @@ body{
 #aguafria-desc{
     font-size: 1.2rem !important
 }
-#record-company{
-    align-items: center;
-    margin-left: 10%;
-    width: 80%;
-}
-#record-company p{
-    position: relative;
-    text-align: center;
-}
-#record-company-logo img{
-    height: 200px;
-}
-#record-company-logo{
-    display: flex;
-    justify-content: space-evenly;
-}
-#sponsors-grid{
-    display: content;
-}
-#sponsors-grid a{
-    text-decoration: none;
-    padding: 5px;
-    overflow: hidden;
-}
-#sponsors-grid img{
-    width: 200px;
-    height: 100px;
-}
-#management-booking{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#management {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   flex-wrap: wrap;
-}
-#management p:nth-child(3){
-    margin: 0;
-}
-#management-booking span{
-    margin-top: 40px;
-}
-#booking{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-.mail{
-    text-decoration: underline;
-}
-.region{
-    color: var(--red);
-}
-#management-span{
-    color: var(--red);
-}
-#footer{
-    margin-top: 40px;
- text-align: center;   
-}
-#footer a{
-    color: var(--primary-text-color);
-}
 
 
-        /* KEYFRAMES */
-@keyframes webshop-animation{
-    50%{
-        transform: scale(1.5);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
 
         /* Responsive styles */
     /* smartphones screens */
 @media screen and (max-width:767px){
     body h1, h2, h3, h4, span{
+        font-size: 1.4rem;
+    }
+    body p{
         font-size: 1rem;
     }
-    p{
-        font-size: 0.6rem;
-    }
-    .navbar{
-        position: fixed;
-        height: 40px;
-    }
-    .navbar h1{
-        /* display: none; */
-        font-size: 1.2rem;
-    }
-    .navbar img{
-        display: none;
-    }
-    .nav-right{
-        display: none;
-    }
-
-
-    #mobile-menu{
-        position: absolute;
-        right: 0;
-        margin-right: 16px;
-        display: block;
-    }
+    
     #background-image-shadow{
         width: 100%;
     }
@@ -458,8 +297,7 @@ body{
         width: 100%;
     }
     .social{
-        /* top: -24px; */
-        top: 0px;
+        bottom: 280px;
         padding: 0;
         transform: scale(.8);
     }
@@ -474,7 +312,7 @@ body{
         border: 0;
     }
     #webshop p{
-        font-size: 1rem;
+        /* font-size: 1rem; */
     }
     .info-h3{
         font-size: 1rem;
@@ -487,7 +325,7 @@ body{
         margin-bottom: 20px;
     }
     #new-release-p{
-        font-size: 0.6rem;
+        /* font-size: 0.6rem; */
     }
     #tour{
         display: block;
@@ -496,7 +334,7 @@ body{
         margin: 0;
     }
     #tour p{
-        font-size: 0.6rem;
+        /* font-size: 0.6rem; */
         margin: 4px 0;
         text-align: center;
     }
@@ -522,7 +360,7 @@ body{
         margin: 0;
     }
     #recent-album p{
-        font-size: .6rem;
+        /* font-size: .6rem; */
         text-align: center;
     }
     #recent-album img{
@@ -540,8 +378,11 @@ body{
         height: 250px;
     }
     #previous-albums h4{
-        font-size: 0.6rem;
-        margin-left: 12%;
+        font-size: 0.8rem;
+        margin-left: 3%;
+    }
+    #previous-albums h4>p{
+        font-size: 0.8rem;
     }
     .cover-grid{
         padding: 0 8px;
@@ -557,16 +398,18 @@ body{
         width: 100%;
         height: 176px;
     }
+    .album-cover p{
+        height: 38px;
+    }
     .buy-now-button{
-        width: 50%;
-        margin-left: 40%;
-        padding: 6px;
+        width: 70%;
+        margin-left: 20%;
+        /* padding: 6px; */
     }
     .buy-now-price{
         width: 50%;
-        margin-right: 25% ;
-        
-        padding: 6px;
+        margin-right: 0 ;
+        padding: 8px;
     }
     #aguafria{
         height: 252.52px;
@@ -590,16 +433,40 @@ body{
         height: 40px;
     }
     #booking{
+        display: block;
+        text-align: center;
         padding: 0 8px;
         column-gap: 8px;
         box-sizing: border-box;
     }
     #booking p{
-        font-size: 0.5rem;
+        /* font-size: 0.5rem; */
     }
 
 }
     /* tablets screens */
 @media screen and (min-width:767px) and (max-width:1023px){
 
+}
+
+
+
+        /* KEYFRAMES */
+
+@keyframes left-fade{
+    0%{
+        transform: translate(300px,0);
+    }
+    100%{
+        transform: translate(0px,0);
+    }
+}
+
+@keyframes right-fade{
+    0%{
+        transform: translate(0px,0);
+    }
+    100%{
+        transform: translate(300px,0);
+    }
 }

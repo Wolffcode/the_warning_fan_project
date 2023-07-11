@@ -1,6 +1,6 @@
 :root{
     --primary-text-color : #f7f7f7;
-    --red:red;
+    --red:#c72c2c;
     --webshop-color:#EDD23B;
     --buy-now-color:rgb(56, 56, 56);
 }
@@ -424,29 +424,161 @@ body{
     #aguafria-desc{
         font-size: 0.6rem !important; 
     }
-    #record-company-logo img {
-        margin-top: 20px;
-        height: 80px;
-    }
-    #sponsors-grid img {
-        width: 80px;
-        height: 40px;
-    }
-    #booking{
-        display: block;
-        text-align: center;
-        padding: 0 8px;
-        column-gap: 8px;
-        box-sizing: border-box;
-    }
-    #booking p{
-        /* font-size: 0.5rem; */
-    }
 
 }
     /* tablets screens */
-@media screen and (min-width:767px) and (max-width:1023px){
+@media screen and (min-width:767px) and (max-width:1024px){
 
+    body h1, h2, h3, h4, span{
+        font-size: 1.6rem;
+    }
+    body p{
+        font-size: 1.1rem;
+    }
+    #background-image-shadow{
+        width: 100%;
+    }
+    #background-image-shadow img{
+        bottom: 35%;
+        transform: scale(.4);
+    }
+    .background-image img{
+        height: 50vh;
+        width: 100%;
+    }
+    .social{
+        bottom: 460px;
+        padding: 0;
+        /* transform: scale(.8); */
+    }
+    .content article{
+        width: 100%;
+        box-sizing: border-box;
+        margin:0
+    }
+    #webshop{
+        margin-top: 20px;
+        margin: 0;
+        border: 0;
+    }
+    #webshop p{
+        /* font-size: 1rem; */
+    }
+    .info-h3{
+        font-size: 1.6rem;
+        padding: 0 10px;
+        text-align: center;
+    }
+    #last-release iframe{
+        width: 100%;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+    #new-release-p{
+        /* font-size: 0.6rem; */
+    }
+    #tour{
+        display: block;
+    }
+    #tour h3.info-h3{
+        margin: 0;
+    }
+    #tour p{
+        /* font-size: 0.6rem; */
+        margin: 4px 0;
+        text-align: center;
+    }
+    #tour a{
+        position: relative;
+        bottom: -4px;
+    }
+    #tour p::after {
+        content: '';
+        display: block;
+        position: relative;
+        width: 62%;
+        margin-left: 19%;
+        height: 2px;
+        background-color: var(--primary-text-color);
+    }
+    #recent-album{
+        display: block;
+        margin: 0;
+        width: 100%;
+        /* display: grid;
+        grid-template-columns: 1fr 1fr; */
+    }
+    #recent-album div{
+        margin: 0;
+    }
+    #recent-album p{
+        /* font-size: .6rem; */
+        text-align: center;
+    }
+    #recent-album img{
+        width: 100%;
+    }
+    #album-music-videos{
+        box-sizing: border-box;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 8px;
+        column-gap: 8px;
+        padding: 8px;
+    }
+    #video-autoplay iframe{
+        width: 100%;
+        height: 400px;
+    }
+    #previous-albums h4{
+        font-size: 0.8rem;
+        margin-left: 3%;
+    }
+    #previous-albums h4>p{
+        font-size: 0.8rem;
+    }
+    .cover-grid{
+        padding: 0 40px;
+        box-sizing: border-box;
+        justify-content: space-between;
+        column-gap: 8px;
+    }
+    .album-cover{
+        width: 100%;
+        text-align: center;
+    }
+    .album-cover img{
+        /* width: 100%; */
+        /* height: 176px; */
+    }
+    .album-cover p{
+        height: 38px;
+    }
+    .buy-now-button{
+        width: 70%;
+        margin-left: 20%;
+    }
+    .buy-now-button p{
+        position: relative;
+        top: 4px;
+    }
+    .buy-now-price{
+        width: 50%;
+        margin-right: 0 ;
+        padding: 12px;
+    }
+    #aguafria{
+        height: 500px;
+        margin-top: 12px;
+    }
+    #aguafria-text{
+        margin-top: 130px;
+    }
+    #aguafria-text p{
+        font-size: 1.6rem;
+    }
+    #aguafria-desc{
+        font-size: 1rem !important; 
+    }
 }
 
 

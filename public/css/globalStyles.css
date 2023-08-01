@@ -11,8 +11,11 @@ body{
     color: var(--primary-text-color);
     font-family: 'Roboto', sans-serif;
 }
+h1{
+    font-size: 32px;
+}
 .inactive{
-    display: none;
+    display: none !important;
 }
 .left-fade{
     animation: menu-fade 0.3s;
@@ -97,6 +100,13 @@ body{
 }
 #mobile-menu{
     display: none;
+}
+
+.content article{
+    width: 62%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
 }
 
 #record-company{
@@ -223,6 +233,9 @@ body{
         margin: 0;
         padding-left: 16px;
     }
+    .nav-ul-mobile > .nav-li{
+        margin: 5px 0;
+    }
     .nav-li a{
         padding: 0;
     }
@@ -260,9 +273,6 @@ body{
         column-gap: 8px;
         box-sizing: border-box;
     }
-    #booking p{
-        /* font-size: 0.5rem; */
-    }
 }
 
 
@@ -283,7 +293,7 @@ body{
         height: 80px;
     }
     .navbar h1{
-        width: 200px;
+        width: 210px;
         font-size: 1.8rem;
     }
     .navbar img{
@@ -357,18 +367,12 @@ body{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
-    #sponsors-grid img {
-        
-    }
     #booking{
         display: block;
         text-align: center;
         padding: 0 8px;
         column-gap: 8px;
         box-sizing: border-box;
-    }
-    #booking p{
-        /* font-size: 0.5rem; */
     }
 }
 

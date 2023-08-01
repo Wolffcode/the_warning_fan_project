@@ -1,0 +1,37 @@
+:root{
+    --primary-text-color : #f7f7f7;
+    --red:#c72c2c;
+    --webshop-color:#EDD23B;
+    --buy-now-color:rgb(56, 56, 56);
+}
+
+.content img{
+    width: 100%;
+}
+.content h1{
+    margin-left: 19%;
+}
+.news-info{
+    margin-top: 28px !important;
+}
+.news-info a{
+    color: var(--red);
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+}
+
+@media screen and (max-width:767px){
+    .content article{
+        margin-top: 60px;
+    }
+    #news-image{
+        width: 100%;
+        left: 0;
+    }
+}
+@media screen and (min-width:767px) and (max-width:1024px){
+
+}

@@ -1,0 +1,8 @@
+#background-photo-container{
+    margin-left:0;
+    box-sizing: border-box;
+}
+#background-photo{
+    filter: grayscale(100%);
+    width: 100vw;
+}

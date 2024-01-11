@@ -113,12 +113,19 @@
         width: 70%;
     }
 
+    
+    #error-world-tour img:nth-child(1){
+        margin: 0;
+    }
+
+    
+    #error-world-tour img:nth-child(2){
+        margin-left: -35px;
+    }
+
     #error-world-tour img:nth-child(3){
         margin: 0;
         grid-column: 1/3;
-    }
-    #error-world-tour img:nth-child(1){
-        margin: 0;
     }
 }
 /* Styles for smarthphones devices */

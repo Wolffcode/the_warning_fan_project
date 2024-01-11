@@ -21,15 +21,27 @@
         // ulDropdown.addEventListener('click',toggleList)
 
 
+        // function toggleMenu(){
+        //     const isSideMenuOpen = !sideMenu.classList.contains('inactive')
+
+        //     if(isSideMenuOpen){
+        //         sideMenu.classList.add('inactive')
+        //         sideMenu.style.setProperty("animation","right-fade 01s")
+        //     }else{
+        //         sideMenu.classList.remove('inactive')
+        //         sideMenu.style.setProperty("animation","left-fade 0.3s")
+        //     }
+        // }
         function toggleMenu(){
             const isSideMenuOpen = !sideMenu.classList.contains('inactive')
 
             if(isSideMenuOpen){
                 sideMenu.classList.add('inactive')
-                sideMenu.style.setProperty("animation","right-fade 01s")
-            }else{
+                sideMenu.computedStyleMap.setProperty("animation", "right-fade 01s")
+            }
+            else{
                 sideMenu.classList.remove('inactive')
-                sideMenu.style.setProperty("animation","left-fade 0.3s")
+                sideMenu.computedStyleMap.setProperty("animation", "left-fade 0.3s")
             }
         }
 
